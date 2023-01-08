@@ -1,7 +1,7 @@
 import {createContext, useContext, useState} from "react";
-import {Round2Service} from "../services/Round2Service";
+import {Round2Service} from "../../services/Round2Service";
 import { Redirect } from 'react-router-dom';
-import {ROUTE_HOME, ROUTE_LOGIN} from "../constants/routes";
+import {ROUTE_HOME, ROUTE_LOGIN} from "../../constants/routes";
 
 const AuthContext=createContext()
 export function AuthProvider({children}){
@@ -49,7 +49,7 @@ export function AuthProvider({children}){
 export function useAuthContext(){
     const context = useContext(AuthContext);
     if (!context) {
-        throw new Error('useLogin must be used within a LoginProvider');
+        throw new Error('useLogin must be used within a AuthProvider');
     }
     return context;
 }
