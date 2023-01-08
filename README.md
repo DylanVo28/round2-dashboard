@@ -1,8 +1,9 @@
 # Project structure React App
-
-/root
+````sh
+root
+|
 --/public
-
+|
 --/src
 |
 ----/assets      This folder consists of images and fonts, ...
@@ -30,3 +31,4 @@
 --.env           This file config to development environment
 |
 --.env.prod      This file config to production environment
+````
